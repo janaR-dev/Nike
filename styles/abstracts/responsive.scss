@@ -1,0 +1,11 @@
+@mixin responsive($device) {
+  @if $device == 'mobile' {
+   @media (min-width: 371px) and (max-width: 577px){ @content; }
+  } @else if $device == 'tablet' {
+    @media (min-width: 577px) and (max-width: 992px) { @content; }
+  } @else if $device == 'tablet-landscape' {
+   @media (min-width: 992px) and (max-width: 1181px) { @content; }
+  } @else if $device == 'desktop' {
+    @media (min-width: 1181px) and (max-width: 1400px)  { @content; }
+  }
+}

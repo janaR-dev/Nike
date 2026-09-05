@@ -1,0 +1,18 @@
+let prev = document.querySelector(".prev"),
+    next = document.querySelector(".next"),
+    body = document.body,
+    navbar = document.querySelector("nav.navbar"),
+    brand = document.querySelector(".navbar-brand img"),
+    logoIcon = document.querySelector(".logoIcon"),
+    slide=document.querySelectorAll(".sc-carousal-item"),
+    colors = ['red', 'blue',  'yellow'],
+    btns = document.querySelectorAll('nav li i[data-key-popup]'),
+    popups = document.querySelectorAll('.popup[data-key-popup]'),
+    closeBtns = document.querySelectorAll('.popup .exit'),
+    popupContainer = document.querySelectorAll('.popup .container .box'),
+    sections = document.querySelectorAll('section'),
+    navLinks = document.querySelectorAll('.nav-item'),
+    products = document.querySelectorAll('#Latest .product'),
+    correctImg = document.querySelectorAll('.correctImg'),
+    currentIndex = 0;
+

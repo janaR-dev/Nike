@@ -1,0 +1,19 @@
+@use '../abstracts/shares' as *;
+
+body { 
+   --main-color: #{$firstColor};
+
+    &.red {
+        --main-color: #{$firstColor};
+    }
+
+    &.blue {
+        --main-color: #{$secondColor};
+    
+    }
+
+    &.yellow {
+        --main-color: #{$thirdColor};
+        
+    }
+}

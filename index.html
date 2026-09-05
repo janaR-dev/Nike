@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nike</title>
-    <link rel="icon" type="image/x-icon" href="public/images/first-logo.png">
+    <link rel="icon" type="image/x-icon" class="logoIcon" href="public/images/0-logo.png">
     <link rel="stylesheet" href="styles/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -13,122 +13,822 @@
 </head>
 
 <body>
+    <section id="header">
+        <nav class="navbar navbar-expand-lg transparent">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img id="Logo" src="./public/images/0-logo.png" alt="" class="img-fluid">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-0">
+                        <li class="nav-item me-0 mb-2 me-lg-3 active" data-section-id="header">
+                            <a class="nav-link" aria-current="page" href="#header">Home</a>
+                        </li>
+                        <li class="nav-item me-0 mb-2 me-lg-3" data-section-id="Latest">
+                            <a class="nav-link" href="#Latest">Latest</a>
+                        </li>
+                        <li class="nav-item" data-section-id="Featured">
+                            <a class="nav-link" href="#Featured">Featured</a>
+                        </li>
+                    </ul>
+                    <ul class="list-unstyled list-two  d-flex mb-0">
+                        <li class="me-3"><i class="fas fa-heart"></i></li>
+                        <li class="me-3"><i class="fas fa-shopping-cart" data-key-popup="shoping-list"></i></li>
+                        <li><i class="fas fa-user" data-key-popup="login"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header class="containerH">
+            <div id="SC-carousal" class="vh-100">
+                <div class="sc-carousal-inner">
+                    <div class="sc-carousal-item ">
+                        <div class="row container header-page">
+                            <div class="col-lg-5 h-100 part1">
+                                <div class="item">
+                                    <h4>Nike Red shoes</h4>
+                                    <h2 class="h1">
+                                        Nike Metcon Shoes
+                                    </h2>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet placeat nobis,
+                                        eligendi ex esse tenetur aliquid sequi repudiandae nam maiores voluptate modi
+                                        voluptatem aliquam ipsum architecto quas hic facere minima!</p>
+                                    <button class="btn btn-success">See More</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 part2">
+                                <div class="item">
+                                    <img src="public/images/home-shoe-1.png" alt="" class="img-fluid shoes">
+                                    <img src="public/images/home-text-1.png" alt="" class="img-fluid shoesName">
 
-    <header>
-        <div id="SC-carousal" class="vh-100">
-            <div class="sc-carousal-inner">
-                <div class="sc-carousal-item ">
-                    <div class="row">
-                        <div class="col-lg-5">
-                            <div class="item">
-                                <h4>Nike Red shoes</h4>
-                                <h2 class="h1">
-                                    Nike Metcon Shoes
-                                </h2>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet placeat nobis,
-                                    eligendi ex esse tenetur aliquid sequi repudiandae nam maiores voluptate modi
-                                    voluptatem aliquam ipsum architecto quas hic facere minima!</p>
-                                <button class="btn btn-success">See More</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-7">
+                    </div>
+                    <div class="sc-carousal-item ">
+                        <div class="row container header-page">
+                            <div class="col-lg-5  part1">
+                                <div class="item">
+                                    <h4>Nike Blue shoes</h4>
+                                    <h2 class="h1">
+                                        Nike Metcon Shoes
+                                    </h2>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet placeat nobis,
+                                        eligendi ex esse tenetur aliquid sequi repudiandae nam maiores voluptate modi
+                                        voluptatem aliquam ipsum architecto quas hic facere minima!</p>
+                                    <button class="btn btn-success">See More</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 part2">
+                                <div class="item">
+                                    <img src="public/images/home-shoe-2.png" alt="" class="img-fluid shoes">
+                                    <img src="public/images/home-text-2.png" alt="" class="img-fluid shoesName">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sc-carousal-item ">
+                        <div class="row container header-page">
+                            <div class="col-lg-5 h-100 part1">
+                                <div class="item">
+                                    <h4>Nike Yellow shoes</h4>
+                                    <h2 class="h1">
+                                        Nike Metcon Shoes
+                                    </h2>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet placeat nobis,
+                                        eligendi ex esse tenetur aliquid sequi repudiandae nam maiores voluptate modi
+                                        voluptatem aliquam ipsum architecto quas hic facere minima!</p>
+                                    <button class="btn btn-success">See More</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 part2">
+                                <div class="item">
+                                    <img src="public/images/home-shoe-3.png" alt="" class="img-fluid shoes">
+                                    <img src="public/images/home-text-3.png" alt="" class="img-fluid shoesName">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="prev"><i class="fa-solid fa-angle-left"></i></button>
+
+                <button class="next"><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+        </header>
+        <div class="saleOff">
+            <div class="row g-0">
+                <div class="part1 col-sm-6 p-0 m-0">
+                    <div class="item">
+                        <a href="#" class="d-block">
+                            <img src="./public/images/home-banner-1.png" alt="" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
+                <div class="part2 col-sm-6 p-0 m-0">
+                    <div class="item">
+                        <a href="#" class="d-block">
+                            <img src="./public/images/home-banner-2.png" alt="" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Latest" class="py-4 py-lg-5">
+        <div class="container">
+            <div class="title text-center mb-5">
+                <img src="./public/images/0-correct.png" alt="" class="correctImg">
+                <h2>LATEST PRODUCTS</h2>
+            </div>
+
+            <div class="products">
+
+                <div class="product mb-3" data-product-id="17" data-selected-size="s" data-selected-color="#000">
+                    <div class="row">
+                        <div class="col-lg-6 mb-md-4 mb-lg-0 product-images">
                             <div class="item">
-                                <img src="public/images/home-shoe-1.png" alt="" class="img-fluid">
-                                <img src="public/images/home-text-1.png" alt="" class="img-fluid">
+                                <div class="row">
+                                    <div class="col-md-2 col-lg-3 col-xl-2">
+                                        <div class="item">
+                                            <ul class="list-unstyled">
+                                                <li onclick="showImg(this)" class="me-2 me-md-0 mb-md-2"><img
+                                                        src="/public/images/products/17-1.png"
+                                                        alt="" class="img-fluid"></li>
+                                                <li onclick="showImg(this)" class="me-2 me-md-0 mb-md-2"><img
+                                                        src="/public/images/products/17-2.png"
+                                                        alt="" class="img-fluid"></li>
+                                                <li onclick="showImg(this)" class="me-2 me-md-0 mb-md-2"><img
+                                                        src="/public/images/products/17-3.png"
+                                                        alt="" class="img-fluid"></li>
+                                                <li onclick="showImg(this)"><img
+                                                        src="/public/images/products/17-4.png"
+                                                        alt="" class="img-fluid"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-10 col-lg-9 col-xl-10 selected-image">
+                                        <div class="item">
+                                            <img src="public/images/products/17-1.png" alt=""
+                                                class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 product-content">
+                            <div class="item">
+                                <h3>New Nike Black Airmax Shoes</h3>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi modi minus eum debitis
+                                    in?
+                                    Aliquid doloribus, omnis eveniet inventore quod delectus dolores quia illum itaque
+                                    dolorem, fuga recusandae at minus eum. Dolore exercitationem hic fugiat. Eaque,
+                                    inventore soluta sunt voluptates nisi esse. Reprehenderit dolorem qui, dolores
+                                    asperiores fuga illo eligendi!</p>
+                                <h6 class="price">
+                                    <strong class="me-3">Price :</strong>
+                                    <p class="mb-0">
+                                        <span class="before-discount">120 <sup>$</sup></span>
+                                        <span class="after-discount">96 <sup>$</sup></span>
+                                    </p>
+                                </h6>
+                                <h6 class="size my-3">
+                                    <strong class="me-3">Size :</strong>
+                                    <ul class="list-unstyled mb-0">
+
+                                       <li class="sizes active" data-size ='s'>S</li>
+
+                                        <li class="sizes" data-size ='m'>M</li>
+
+                                        <li class="sizes" data-size ='l'>L</li>
+
+                                        <li class="sizes" data-size ='xl'>XL</li>                                     </ul>
+                                </h6>
+
+                                <button class="btn mainButton add" onclick="getProduct(this)">Add To
+                                    Cart</button>
 
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="sc-carousal-item ">
+                <div class="product mb-3" data-product-id="18" data-selected-size="s" data-selected-color="#fff">
                     <div class="row">
-                        <div class="col-lg-5">
+                        <div class="col-lg-6 mb-md-4 mb-lg-0 product-images">
                             <div class="item">
-                                <h4>Nike Blue shoes</h4>
-                                <h2 class="h1">
-                                    Nike Metcon Shoes
-                                </h2>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet placeat nobis,
-                                    eligendi ex esse tenetur aliquid sequi repudiandae nam maiores voluptate modi
-                                    voluptatem aliquam ipsum architecto quas hic facere minima!</p>
-                                <button class="btn btn-success">See More</button>
+                                <div class="row">
+                                    <div class="col-md-2 col-lg-3 col-xl-2">
+                                        <div class="item">
+                                            <ul class="list-unstyled">
+                                                <li onclick="showImg(this)" class="me-2 me-md-0 mb-md-2"><img
+                                                        src="./public/images/products/18-1.png"
+                                                        alt="" class="img-fluid"></li>
+                                                <li onclick="showImg(this)" class="me-2 me-md-0 mb-md-2"><img
+                                                        src="./public/images/products/18-2.png"
+                                                        alt="" class="img-fluid"></li>
+                                                <li onclick="showImg(this)" class="me-2 me-md-0 mb-md-2"><img
+                                                        src="./public/images/products/18-3.png"
+                                                        alt="" class="img-fluid"></li>
+                                                <li onclick="showImg(this)"><img
+                                                        src="./public/images/products/18-4.png"
+                                                        alt="" class="img-fluid"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-10 col-lg-9 col-xl-10 selected-image">
+                                        <div class="item">
+                                            <img src="./public/images/products/18-1.png" alt=""
+                                                class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-7">
+                        <div class="col-lg-6 product-content">
                             <div class="item">
-                                <img src="public/images/home-shoe-2.png" alt="" class="img-fluid">
-                                <img src="public/images/home-text-2.png" alt="" class="img-fluid">
+                                <h3>New Nike White Airmax Shoes</h3>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi modi minus eum debitis
+                                    in?
+                                    Aliquid doloribus, omnis eveniet inventore quod delectus dolores quia illum itaque
+                                    dolorem, fuga recusandae at minus eum. Dolore exercitationem hic fugiat. Eaque,
+                                    inventore soluta sunt voluptates nisi esse. Reprehenderit dolorem qui, dolores
+                                    asperiores fuga illo eligendi!</p>
+                                <h6 class="price">
+                                    <strong class="me-3">Price :</strong>
+                                    <p class="mb-0">
+                                        <span class="before-discount">140 <sup>$</sup></span>
+                                        <span class="after-discount">112 <sup>$</sup></span>
+                                    </p>
+                                </h6>
+                                <h6 class="size my-3">
+                                    <strong class="me-3">Size :</strong>
+                                    <ul class="list-unstyled mb-0 ">
+
+                                        <li class="sizes active" data-size ='s'>S</li>
+
+                                        <li class="sizes" data-size ='m'>M</li>
+
+                                        <li class="sizes" data-size ='l'>L</li>
+
+                                        <li class="sizes" data-size ='xl'>XL</li>
+                                    </ul>
+                                </h6>
+
+                                <button class="btn mainButton add" onclick="getProduct(this)">Add To
+                                    Cart</button>
 
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="sc-carousal-item ">
-                    <div class="row ">
-                        <div class="col-lg-5">
+                <div class="product mb-3" data-product-id="19" data-selected-size="s" data-selected-color="#fff">
+                    <div class="row">
+                        <div class="col-lg-6 mb-md-4 mb-lg-0 product-images">
                             <div class="item">
-                                <h4>Nike Yellow shoes</h4>
-                                <h2 class="h1">
-                                    Nike Metcon Shoes
-                                </h2>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet placeat nobis,
-                                    eligendi ex esse tenetur aliquid sequi repudiandae nam maiores voluptate modi
-                                    voluptatem aliquam ipsum architecto quas hic facere minima!</p>
-                                <button class="btn btn-success">See More</button>
+                                <div class="row">
+                                    <div class="col-md-2 col-lg-3 col-xl-2">
+                                        <div class="item">
+                                            <ul class="list-unstyled">
+                                                <li onclick="showImg(this)" class="me-2 me-md-0 mb-md-2"><img
+                                                        src="public/images/products/19-1.png"
+                                                        alt="" class="img-fluid"></li>
+                                                <li onclick="showImg(this)" class="me-2 me-md-0 mb-md-2"><img
+                                                        src="public/images/products/19-2.png"
+                                                        alt="" class="img-fluid"></li>
+                                                <li onclick="showImg(this)" class="me-2 me-md-0 mb-md-2"><img
+                                                        src="public/images/products/19-3.png"
+                                                        alt="" class="img-fluid"></li>
+                                                <li onclick="showImg(this)"><img
+                                                        src="public/images/products/19-4.png"
+                                                        alt="" class="img-fluid"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-10 col-lg-9 col-xl-10 selected-image">
+                                        <div class="item">
+                                            <img src="public/images/products/19-1.png" alt=""
+                                                class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-7">
+                        <div class="col-lg-6 product-content">
                             <div class="item">
-                                <img src="public/images/home-shoe-13.png" alt="" class="img-fluid">
-                                <img src="public/images/home-text-3.png" alt="" class="img-fluid">
+                                <h3>New Nike Mix Airmax Shoes</h3>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi modi minus eum debitis
+                                    in?
+                                    Aliquid doloribus, omnis eveniet inventore quod delectus dolores quia illum itaque
+                                    dolorem, fuga recusandae at minus eum. Dolore exercitationem hic fugiat. Eaque,
+                                    inventore soluta sunt voluptates nisi esse. Reprehenderit dolorem qui, dolores
+                                    asperiores fuga illo eligendi!</p>
+                                <h6 class="price">
+                                    <strong class="me-3">Price :</strong>
+                                    <p class="mb-0">
+                                        <span class="before-discount">160 <sup>$</sup></span>
+                                        <span class="after-discount">128 <sup>$</sup></span>
+                                    </p>
+                                </h6>
+                                <h6 class="size my-3">
+                                    <strong class="me-3">Size :</strong>
+                                    <ul class="list-unstyled mb-0">
+
+                                        <li class="sizes active" data-size ='s'>S</li>
+
+                                        <li class="sizes" data-size ='m'>M</li>
+
+                                        <li class="sizes" data-size ='l'>L</li>
+
+                                        <li class="sizes" data-size ='xl'>XL</li>
+                                     </ul>
+                                </h6>
+
+                                <button class="btn mainButton add" onclick="getProduct(this)">Add To
+                                    Cart</button>
 
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="prev"><i class="fa-solid fa-angle-left"></i></button>
-
-            <button class="next"><i class="fa-solid fa-angle-right"></i></button>
         </div>
-    </header>
-    <!-- <section class="heading">
+    </section>
+    <section id="Featured" class="pb-4 pb-lg-5">
         <div class="container">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Features</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Pricing</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                            </li>
-                        </ul>
+            <div class="title text-center mb-5">
+                <img src="./public/images/0-correct.png" alt="" class="correctImg">
+                <h2>FEATURE PRODUCTS</h2>
+            </div>
+
+            <div class="row products">
+
+
+                <div class="col-sm-6 col-lg-3 mb-3 product">
+                    <div class="item">
+                        <p class="offer ">-16%</p>
+                        <div class="head pb-5">
+                            <img src="public/images/products/1-1.png" alt="" class="img-fluid">
+                            <i class="fas fa-search key" data-key-popup="product" data-product-id="1"></i>
+                            <div class="indicators">
+                                <ul class="list-unstyled">
+                                    <li onclick="showFeaturedImg(this)" data-src="1-1.png" class="active"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="1-2.png"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="1-3.png"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="1-4.png"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="body text-center">
+                            <h6>Basketball Shoes</h6>
+                            <h6>
+                                <span class="before-discount">179.99 <sup>$</sup></span>
+                                <span class="after-discount">151.19 <sup>$</sup></span>
+                            </h6>
+                        </div>
                     </div>
                 </div>
-            </nav>
-            <div class="header"></div>
-            <div class="offers"></div>
+
+                <div class="col-sm-6 col-lg-3 mb-3 product">
+                    <div class="item">
+                        <p class="offer ">-18%</p>
+                        <div class="head pb-5">
+                            <img src="public/images/products/2-1.png" alt="" class="img-fluid">
+                            <i class="fas fa-search key" data-key-popup="product" data-product-id="2"></i>
+                            <div class="indicators">
+                                <ul class="list-unstyled">
+                                    <li onclick="showFeaturedImg(this)" data-src="2-1.png" class="active"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="2-2.png"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="2-3.png"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="2-4.png"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="body text-center">
+                            <h6>Peak DH3 Mens</h6>
+                            <h6>
+                                <span class="before-discount">158.55 <sup>$</sup></span>
+                                <span class="after-discount">130.01 <sup>$</sup></span>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3 mb-3 product">
+                    <div class="item">
+                        <p class="offer ">-20%</p>
+                        <div class="head pb-5">
+                            <img src="public/images/products/3-1.png" alt="" class="img-fluid">
+                            <i class="fas fa-search key" data-key-popup="product" data-product-id="3"></i>
+                            <div class="indicators">
+                                <ul class="list-unstyled">
+                                    <li onclick="showFeaturedImg(this)" data-src="3-1.png" class="active"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="3-2.png"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="3-3.png"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="3-4.png"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="body text-center">
+                            <h6>Fun-Running VII</h6>
+                            <h6>
+                                <span class="before-discount">146.55 <sup>$</sup></span>
+                                <span class="after-discount">117.24 <sup>$</sup></span>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3 mb-3 product">
+                    <div class="item">
+                        <p class="offer ">-10%</p>
+                        <div class="head pb-5">
+                            <img src="public/images/products/4-1.png" alt="" class="img-fluid">
+                            <i class="fas fa-search key" data-key-popup="product" data-product-id="4"></i>
+                            <div class="indicators">
+                                <ul class="list-unstyled">
+                                    <li onclick="showFeaturedImg(this)" data-src="4-1.png" class="active"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="4-2.png"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="4-3.png"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="4-4.png"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="body text-center">
+                            <h6>2.0 INK Sport Running</h6>
+                            <h6>
+                                <span class="before-discount">132.66 <sup>$</sup></span>
+                                <span class="after-discount">119.39 <sup>$</sup></span>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3 mb-3 product">
+                    <div class="item">
+                        <p class="offer d-none">-0%</p>
+                        <div class="head pb-5">
+                            <img src="public/images/products/5-1.png" alt="" class="img-fluid">
+                            <i class="fas fa-search key" data-key-popup="product" data-product-id="5"></i>
+                            <div class="indicators">
+                                <ul class="list-unstyled">
+                                    <li onclick="showFeaturedImg(this)" data-src="5-1.png" class="active"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="5-2.png"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="5-3.png"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="body text-center">
+                            <h6>Asics Metarise</h6>
+                            <h6>
+
+                                <span class="after-discount">276.88 <sup>$</sup></span>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3 mb-3 product">
+                    <div class="item">
+                        <p class="offer ">-12%</p>
+                        <div class="head pb-5">
+                            <img src="public/images/products/6-1.png" alt="" class="img-fluid">
+                            <i class="fas fa-search key" data-key-popup="product" data-product-id="6"></i>
+                            <div class="indicators">
+                                <ul class="list-unstyled">
+                                    <li onclick="showFeaturedImg(this)" data-src="6-1.png" class="active"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="6-2.png"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="6-3.png"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="6-4.png"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="body text-center">
+                            <h6>Wave MIZUNO Lightning</h6>
+                            <h6>
+                                <span class="before-discount">178.25 <sup>$</sup></span>
+                                <span class="after-discount">156.86 <sup>$</sup></span>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3 mb-3 product">
+                    <div class="item">
+                        <p class="offer ">-12%</p>
+                        <div class="head pb-5">
+                            <img src="public/images/products/7-1.png" alt="" class="img-fluid">
+                            <i class="fas fa-search key" data-key-popup="product" data-product-id="7"></i>
+                            <div class="indicators">
+                                <ul class="list-unstyled">
+                                    <li onclick="showFeaturedImg(this)" data-src="7-1.png" class="active"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="7-2.png"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="body text-center">
+                            <h6>Vapor Cage 4</h6>
+                            <h6>
+                                <span class="before-discount">135 <sup>$</sup></span>
+                                <span class="after-discount">118.80 <sup>$</sup></span>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3 mb-3 product">
+                    <div class="item">
+                        <p class="offer ">-13%</p>
+                        <div class="head pb-5">
+                            <img src="public/images/products/8-1.png" alt="" class="img-fluid">
+                            <i class="fas fa-search key" data-key-popup="product" data-product-id="8"></i>
+                            <div class="indicators">
+                                <ul class="list-unstyled">
+                                    <li onclick="showFeaturedImg(this)" data-src="8-1.png" class="active"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="8-2.png"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="8-3.png"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="body text-center">
+                            <h6>Don Issue 3</h6>
+                            <h6>
+                                <span class="before-discount">176 <sup>$</sup></span>
+                                <span class="after-discount">153.12 <sup>$</sup></span>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3 mb-3 product">
+                    <div class="item">
+                        <p class="offer ">-13%</p>
+                        <div class="head pb-5">
+                            <img src="public/images/products/9-1.png" alt="" class="img-fluid">
+                            <i class="fas fa-search key" data-key-popup="product" data-product-id="9"></i>
+                            <div class="indicators">
+                                <ul class="list-unstyled">
+                                    <li onclick="showFeaturedImg(this)" data-src="9-1.png" class="active"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="9-2.png"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="9-3.png"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="body text-center">
+                            <h6>Babolat JET</h6>
+                            <h6>
+                                <span class="before-discount">135 <sup>$</sup></span>
+                                <span class="after-discount">117.45 <sup>$</sup></span>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3 mb-3 product">
+                    <div class="item">
+                        <p class="offer ">-12%</p>
+                        <div class="head pb-5">
+                            <img src="public/images/products/10-1.png" alt="" class="img-fluid">
+                            <i class="fas fa-search key" data-key-popup="product" data-product-id="10"></i>
+                            <div class="indicators">
+                                <ul class="list-unstyled">
+                                    <li onclick="showFeaturedImg(this)" data-src="10-1.png" class="active"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="10-2.png"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="body text-center">
+                            <h6>Dita STBL 750</h6>
+                            <h6>
+                                <span class="before-discount">135 <sup>$</sup></span>
+                                <span class="after-discount">118.80 <sup>$</sup></span>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3 mb-3 product">
+                    <div class="item">
+                        <p class="offer ">-12%</p>
+                        <div class="head pb-5">
+                            <img src="public/images/products/11-1.png" alt="" class="img-fluid">
+                            <i class="fas fa-search key" data-key-popup="product" data-product-id="11"></i>
+                            <div class="indicators">
+                                <ul class="list-unstyled">
+                                    <li onclick="showFeaturedImg(this)" data-src="11-1.png" class="active"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="11-2.png"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="11-3.png"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="body text-center">
+                            <h6>Triumph 19 Women</h6>
+                            <h6>
+                                <span class="before-discount">215 <sup>$</sup></span>
+                                <span class="after-discount">189.20 <sup>$</sup></span>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3 mb-3 product">
+                    <div class="item">
+                        <p class="offer d-none">-0%</p>
+                        <div class="head pb-5">
+                            <img src="public/images/products/12-1.png" alt="" class="img-fluid">
+                            <i class="fas fa-search key" data-key-popup="product" data-product-id="12"></i>
+                            <div class="indicators">
+                                <ul class="list-unstyled">
+                                    <li onclick="showFeaturedImg(this)" data-src="12-1.png" class="active"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="12-2.png"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="12-3.png"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="body text-center">
+                            <h6>Triumph 19 Men</h6>
+                            <h6>
+
+                                <span class="after-discount">243.00 <sup>$</sup></span>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3 mb-3 product">
+                    <div class="item">
+                        <p class="offer d-none">-0%</p>
+                        <div class="head pb-5">
+                            <img src="public/images/products/13-1.png" alt="" class="img-fluid">
+                            <i class="fas fa-search key" data-key-popup="product" data-product-id="13"></i>
+                            <div class="indicators">
+                                <ul class="list-unstyled">
+                                    <li onclick="showFeaturedImg(this)" data-src="13-1.png" class="active"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="13-2.png"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="13-3.png"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="body text-center">
+                            <h6>On Cloudflyer Men</h6>
+                            <h6>
+
+                                <span class="after-discount">213.00 <sup>$</sup></span>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3 mb-3 product">
+                    <div class="item">
+                        <p class="offer d-none">-0%</p>
+                        <div class="head pb-5">
+                            <img src="public/images/products/14-1.png" alt="" class="img-fluid">
+                            <i class="fas fa-search key" data-key-popup="product" data-product-id="14"></i>
+                            <div class="indicators">
+                                <ul class="list-unstyled">
+                                    <li onclick="showFeaturedImg(this)" data-src="14-1.png" class="active"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="14-2.png"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="14-3.png"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="body text-center">
+                            <h6>Aero Wave 19</h6>
+                            <h6>
+
+                                <span class="after-discount">188.25 <sup>$</sup></span>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3 mb-3 product">
+                    <div class="item">
+                        <p class="offer ">-12%</p>
+                        <div class="head pb-5">
+                            <img src="public/images/products/15-1.png" alt="" class="img-fluid">
+                            <i class="fas fa-search key" data-key-popup="product" data-product-id="15"></i>
+                            <div class="indicators">
+                                <ul class="list-unstyled">
+                                    <li onclick="showFeaturedImg(this)" data-src="15-1.png" class="active"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="15-2.png"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="15-3.png"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="15-4.png"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="body text-center">
+                            <h6>NIKE Women's Hyperace</h6>
+                            <h6>
+                                <span class="before-discount">178.25 <sup>$</sup></span>
+                                <span class="after-discount">156.86 <sup>$</sup></span>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3 mb-3 product">
+                    <div class="item">
+                        <p class="offer ">-15%</p>
+                        <div class="head pb-5">
+                            <img src="public/images/products/16-1.png" alt="" class="img-fluid">
+                            <i class="fas fa-search key" data-key-popup="product" data-product-id="16"></i>
+                            <div class="indicators">
+                                <ul class="list-unstyled">
+                                    <li onclick="showFeaturedImg(this)" data-src="16-1.png" class="active"></li>
+                                    <li onclick="showFeaturedImg(this)" data-src="16-2.png"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="body text-center">
+                            <h6>NIKE Man's Hyperace</h6>
+                            <h6>
+                                <span class="before-discount">188 <sup>$</sup></span>
+                                <span class="after-discount">159.80 <sup>$</sup></span>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section> -->
+    </section>
+    <div class="loadingScreen hide d-none">
+        <div class="box">
+            <img src="./public/images/nike.gif" alt="" class="img-fluid">
+        </div>
+    </div>
+    <div class="shoping-popup popup" data-key-popup="shoping-list">
+        <div class="container h-100">
+            <div class="box">
+                <div class="head mb-4 mb-lg-5">
+                    <h3 class="text-center">Shop</h3>
+                    <i class="far fa-times-circle exit" data-key-popup="shoping-list"></i>
+                </div>
+                <div class="body">
+                    <p class="alert alert-warning text-center" id="emptyCartMessage">There are no products</p>
+                    <div class="row"></div>
+                    <button class="btn d-block w-100 d-none buy btn-success w-100" id="BuyNowBtn">Buy Now</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="login-popup popup" data-key-popup="login">
+        <div class="container h-100">
+            <div class="box">
+                <div class="head mb-4 mb-lg-5">
+                    <h3 class="text-center">Login</h3>
+                    <i class="far fa-times-circle exit" data-key-popup="login"></i>
+                </div>
+                <div class="body">
+                    <form action="" method="post">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                placeholder="Email*">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password*">
+                        </div>
+                        <button type="submit" class="btn btn-success w-100 my-2">Login</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="product-popup popup">
+        <div class="container">
+            <div class="box">
+                <div class="body">
+                    <div class="row"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="py-2 text-center">
+        <p class="m-0">© 2021 <span>SemiCode, JanaR dev</span>, Ltd. | All Rights Reserved .</p>
+    </footer>
 
 </body>
-<script src="scripts/index.js"></script>
+<script src="scripts/var.js"></script>
 <script src="scripts/funs.js"></script>
 <script src="scripts/shoes.js"></script>
 <!-- <script src="scripts/.js"></script> -->
 <script src="scripts/bootstrap.bundle.js"></script>
+<script src="scripts/index.js"></script>
+
 
 </html>

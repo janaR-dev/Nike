@@ -1,1 +1,15 @@
 @use '../abstracts/shares' as *;
+
+.login-popup{
+
+    .box{
+     width: 550px;
+
+    }
+    input{
+        font-size: 22px;
+        padding: 10px;
+    }
+
+
+}

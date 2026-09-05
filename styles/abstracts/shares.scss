@@ -1,6 +1,4 @@
-@use './colors' as *;
-@use './fonts' as *;
-@use './blocks' as *;
-@use './responsive' as *;
-
-
+@forward './colors';
+@forward './fonts';
+@forward './blocks';
+@forward './responsive';

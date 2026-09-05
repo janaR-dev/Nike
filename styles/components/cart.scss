@@ -1,1 +1,47 @@
 @use '../abstracts/shares' as *;
+
+.shoping-popup.popup {
+
+    overflow-y: scroll;
+     .btn{
+        font-size: 20px;
+                        
+                    }
+                    .buy{
+                        margin-block: 20px;
+                        font-size: 25px;
+                    }
+
+    &.active {
+        .box {
+            top: 0%;
+            width: 950px;
+            font-size: 25px;
+            margin-block: 40px;
+
+            .item {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 10px;
+
+            
+                    .product-body {
+                        h5 {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        font-size: 26px;
+                   
+                    }
+                    strong{
+                        font-size: 20px;
+                    }
+                }
+                
+            }
+
+        }
+
+    }
+
+}
