@@ -22,71 +22,15 @@
 
 }
 
+body {
 
-.popup {
-    width: 100%;
-    height: 100%;
-    background-color: #00000080;
-    position: fixed;
-    top: 0;
-    left: 0;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    pointer-events: none;
-    opacity: 0;
-    z-index: 0;
-    transition-duration: .5s;
+    background: #ada996;
+    background: -webkit-linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+    background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
 
-
-
-    .container {
-        position: relative;
-
-        .box {
-            background: #ada996;
-            background: -webkit-linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
-            background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
-            border-radius: 10px;
-            padding: 20px;
-            overflow: hidden;
-            position: absolute;
-            top: -100%;
-            opacity: 0;
-            transition-duration: 1.2s;
-            justify-self: center;
-
-            .head {
-                h3 {
-                    font-weight: 600;
-                    color: var(--main-color);
-                }
-
-                .exit {
-                    position: absolute;
-                    top: 20px;
-                    right: 20px;
-                    font-size: 25px;
-                    color: var(--main-color);
-                    cursor: pointer;
-                }
-
-            }
-        }
-    }
-
-    &.active {
-        pointer-events: all;
-        opacity: 1;
-        z-index: 10000;
-
-        .box {
-            top: 20%;
-            opacity: 1;
-        }
-
-    }
 }
+
+
 
 .title {
     position: relative;
@@ -117,6 +61,7 @@
     display: flex;
     font-size: 25px;
 }
+
 .color ul li {
     width: 15px;
     height: 15px;
@@ -129,9 +74,10 @@
     transition-duration: .5s;
     border: 1px solid var(--main-color);
 }
+
 .color ul li.active {
     opacity: 1;
-    color: #fff;  
+    color: #fff;
     border: none;
     box-shadow: #00000040 0 54px 55px, #0000001f 0 -12px 30px, #0000001f 0 4px 6px, #0000002b 0 12px 13px, #00000017 0 -3px 5px;
 
@@ -139,16 +85,31 @@
 
 .price {
     font-size: 22px;
-
-    .before-discount {
-        text-decoration: line-through;
-        color: $firstColor;
+    @include responsive("tablet-landscape") {
+        font-size: 10px;
     }
 
-    .after-discount {
-        font-weight: 500;
-        color: #000;
+    @include responsive("tablet") {
+       
+        font-size: 15px;
     }
+
+    @include responsive("mobile") {
+       
+        font-size: 12px;
+    }
+
+
+}
+
+.before-discount {
+    text-decoration: line-through;
+    color: $firstColor;
+}
+
+.after-discount {
+    font-weight: 500;
+    color: #000;
 }
 
 .size {
@@ -169,6 +130,22 @@
         font-size: 19px;
         cursor: pointer;
         transition-duration: .5s;
+        @include responsive("tablet-landscape") {
+        width: 30px;
+        height: 30px;
+    }
+
+    @include responsive("tablet") {
+        width: 25px;
+    height: 25px;
+        font-size: 15px;
+    }
+
+    @include responsive("mobile") {
+        width: 15px;
+    height: 15px;
+        font-size: 12px;
+    }
 
         &.active {
             background-color: var(--main-color);
@@ -178,4 +155,273 @@
 
     }
 
+}
+
+footer {
+    span {
+        color: $firstColor;
+    }
+}
+
+.popup {
+    height: 100%;
+    background-color: #00000080;
+    position: fixed;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 0;
+    transition-duration: 0.5s;
+    padding: 20px;
+    overflow-y: auto;
+
+    @include responsive("desktop") {}
+
+    @include responsive("tablet-landscape") {}
+
+    @include responsive("tablet") {}
+
+    @include responsive("mobile") {}
+
+    .container {
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        height: auto;
+
+        .box {
+            background: #ada996;
+            background: -webkit-linear-gradient(to right,
+                    #eaeaea,
+                    #dbdbdb,
+                    #f2f2f2,
+                    #ada996);
+            background: linear-gradient(to right,
+                    #eaeaea,
+                    #dbdbdb,
+                    #f2f2f2,
+                    #ada996);
+            border-radius: 10px;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+            top: -100%;
+            opacity: 0;
+            transition-duration: 1.2s;
+            justify-self: center;
+           
+            
+
+            .head {
+                h3 {
+                    font-weight: 600;
+                    color: var(--main-color);
+                }
+
+                .exit {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    font-size: 25px;
+                    color: var(--main-color);
+                    cursor: pointer;
+                    z-index: 20;
+                }
+            }
+        }
+    }
+
+    &.active {
+        pointer-events: all;
+        opacity: 1;
+        z-index: 10000;
+
+        .box {
+            top: 0;
+            opacity: 1;
+            
+        }
+    }
+}
+
+.title {
+    position: relative;
+
+    img {
+        width: 20%;
+
+        @include responsive("desktop") {}
+
+        @include responsive("tablet-landscape") {
+            width: 30%;
+        }
+
+        @include responsive("tablet") {
+            width: 30%;
+        }
+
+        @include responsive("mobile") {
+            width: 30%;
+        }
+
+
+    }
+
+    h2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 40px;
+        transform: translate(-50%, -50%);
+        letter-spacing: 1.6px;
+        font-weight: 550;
+        width: 100%;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+        text-align: center;
+
+        @include responsive("desktop") {}
+
+        @include responsive("tablet-landscape") {
+            font-size: 35px;
+        }
+
+        @include responsive("tablet") {
+            font-size: 25px;
+        }
+
+        @include responsive("mobile") {
+            font-size: 20px;
+        }
+
+    }
+}
+
+.price,
+.size,
+.color,
+.size ul,
+.color ul {
+    display: flex;
+    font-size: 25px;
+ 
+align-items: center;
+   @include responsive("desktop") {}
+
+    @include responsive("tablet-landscape") {
+        margin-top: 12px;
+        font-size: 22px;
+    }
+
+    @include responsive("tablet") {
+        font-size: 20px;
+    }
+
+    @include responsive("mobile") {
+        font-size: 14px;
+    }
+
+
+}
+
+.color ul li {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    border: 1px solid var(--main-color);
+    @include responsive("tablet-landscape") {
+        width: 15px;
+    height: 15px;
+        font-size: 10px;
+    }
+
+    @include responsive("tablet") {
+        width: 15px;
+    height: 15px;
+        font-size: 10px;
+    }
+
+    @include responsive("mobile") {
+       
+        font-size: 14px;
+    }
+}
+
+.color ul li.active {
+    opacity: 1;
+    color: #fff;
+    border: none;
+    box-shadow:
+        #00000040 0 54px 55px,
+        #0000001f 0 -12px 30px,
+        #0000001f 0 4px 6px,
+        #0000002b 0 12px 13px,
+        #00000017 0 -3px 5px;
+}
+
+.mainButton {
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    background-color: transparent;
+    transition-duration: .5s;
+    margin-top: 12px;
+    padding: 13px 19px;
+    font-size: 22px;
+    transition-duration: 0.7s;
+
+    &.remove {
+        color: var(--bs-warning);
+        border: 1px solid var(--bs-warning);
+    }
+
+    &:hover.add {
+        background-color: var(--main-color);
+        color: #fff;
+    }
+
+    &:hover.remove {
+        background-color: var(--bs-warning);
+        color: #fff;
+    }
+
+    @include responsive("desktop") {}
+
+    @include responsive("tablet-landscape") {
+        margin-top: 12px;
+        padding: 10px 15px;
+        font-size: 20px;
+    }
+
+    @include responsive("tablet") {
+        padding: 10px 15px;
+        font-size: 17px;
+    }
+
+    @include responsive("mobile") {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+
+}
+
+.loadingScreen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    z-index: 5000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

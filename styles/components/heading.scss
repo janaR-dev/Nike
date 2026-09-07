@@ -7,6 +7,15 @@ header {
     overflow: hidden;
     margin-top: 0;
 
+    @include responsive("desktop") {}
+
+    @include responsive("tablet-landscape") {}
+
+    @include responsive("tablet") {}
+
+    @include responsive("mobile") {    
+}
+
     #SC-carousal {
         position: relative;
 
@@ -52,20 +61,119 @@ header {
                             transition-duration: 1s;
                             position: relative;
 
-                            h4 {
-                                font-size: 25px;
-                                color: var(--main-color);
-                                font-weight: 600;
+                            @include responsive("desktop") {
+                                h4 {
+                                    font-size: 25px;
+                                    font-weight: 600;
+                                }
+
+                                h2 {
+                                    font-size: 40px;
+                                    font-weight: 400;
+                                    margin-block: 20px;
+                                }
+
+                                p {
+                                    font-size: 20px;
+                                    margin-block: 20px;
+                                }
+
+                                .btn {
+                                    padding: 10px 20px;
+                                    border-radius: 8px;
+                                    font-size: 22px;
+
+
+                                }
                             }
 
-                            h2 {
-                                font-size: 40px;
-                                font-weight: 400;
-                                margin-block: 20px;
+                            @include responsive("tablet-landscape") {
+                                h4 {
+                                    font-size: 22px;
+                                    font-weight: 600;
+                                }
+
+                                h2 {
+                                    font-size: 15px;
+                                    font-weight: 400;
+                                    margin-block: 10px;
+                                }
+
+                                p {
+                                    font-size: 13px;
+                                    margin-block: 10px;
+                                }
+
+                                .btn {
+                                    padding: 7px 14px;
+                                    border-radius: 8px;
+                                    font-size: 15px;
+
+
+                                }
                             }
+
+                            @include responsive("tablet") {
+                               
+                                h4 {
+                                    font-size: 17px;
+                                    font-weight: 600;
+                                }
+
+                                h2 {
+                                    font-size: 12px;
+                                    font-weight: 400;
+                                    margin-block: 8px;
+                                }
+
+                                p {
+                                    font-size: 10px;
+                                    margin-block: 8px;
+                                }
+
+                                .btn {
+                                    padding: 7px 14px;
+                                    border-radius: 8px;
+                                    font-size: 12px;
+
+
+                                }
+                            }
+
+                            @include responsive("mobile") {
+                                 top: 10%;
+                                h4 {
+                                    font-size: 15px;
+                                    font-weight: 600;
+                                }
+
+                                h2 {
+                                    font-size: 10px;
+                                    font-weight: 400;
+                                    margin-block: 10px;
+                                }
+
+                                p {
+                                    font-size: 9px;
+                                    margin-block: 10px;
+                                }
+
+                                .btn {
+                                    padding: 5px 10px;
+                                    border-radius: 8px;
+                                    font-size: 12px;
+
+
+                                }
+                            }
+
+                            h4 {
+                                color: var(--main-color);
+                            }
+
+
 
                             p {
-                                font-size: 20px;
                                 color: #777;
                                 margin-block: 20px;
                             }
@@ -74,9 +182,8 @@ header {
                                 background: transparent;
                                 color: var(--main-color);
                                 border: 1px solid var(--main-color);
-                                padding: 10px 20px;
+
                                 border-radius: 8px;
-                                font-size: 22px;
                                 transition-duration: 0.5s;
 
                                 &:hover {
@@ -88,22 +195,74 @@ header {
                     }
 
                     .part2 {
+                         @include responsive("tablet") {
+                           position: relative;
+                        height: 100%; }
+                        @include responsive("mobile") {
+                           position: relative;
+                        height: 100%; }
+                        
                         .shoes {
                             position: absolute;
                             rotate: 0deg;
                             right: -5%;
-                            top: -5%;
-                            z-index: 1;
+                            top: 0%;
+                            z-index:1;
                             transition-duration: 1s;
+
+                            @include responsive("desktop") {
+                                width: 50%;
+                                right: 0%;
+                            }
+
+                            @include responsive("tablet-landscape") {
+                                width: 50%;
+                                right: 2%;
+                                top: -20%;
+
+                            }
+
+                            @include responsive("tablet") {
+                                 right: 10%;
+                                width: 40%;
+                            }
+
+                            @include responsive("mobile") {width: 35%;
+                                right: 25%;
+                                width: 55%;
+                               }
+
+
                         }
 
                         .shoesName {
                             position: absolute;
                             right: 12%;
+                            z-index: -1;
                             top: -100%;
-                            z-index: 0;
                             width: 38%;
                             transition-duration: 1s;
+
+                            @include responsive("desktop") {
+                            width: 38%;
+                            
+                            }
+
+                            @include responsive("tablet-landscape") {
+                                width: 35%;
+                            }
+
+                            @include responsive("tablet") {
+                                width: 30%;
+                                right: 30%;
+                                    transform: translateY(-45%);                            }
+
+                            @include responsive("mobile") {
+                                width: 55%;
+                                 right: 30%;
+                                 bottom: 0;
+
+                            }
                         }
                     }
                 }
@@ -127,7 +286,26 @@ header {
                             }
 
                             .shoesName {
-                                top: -25%;
+                                @include responsive("desktop") {
+                                    top: -25%;
+
+                            
+                            }
+                              @include responsive("tablet-landscape") {
+
+                                    top: -30%;
+
+                            }
+                            @include responsive("tablet") {
+                            top: -0%;
+
+                        transform: translate(40%,-10%);
+                        }
+                        @include responsive("mobile") {
+                            top: -0%;
+
+                        transform: translate(0%,-20%);
+                        }
                             }
                         }
                     }
@@ -150,6 +328,28 @@ header {
         padding: 10px 15px;
         transition-duration: 0.5s;
 
+        @include responsive("desktop") {
+           
+        }
+
+        @include responsive("tablet-landscape") {
+             left: 90%;
+              font-size: 20px;
+
+        }
+
+        @include responsive("tablet") {
+            left: 86%;
+              font-size: 17px;
+        }
+
+        @include responsive("mobile") {
+             left: 80%;
+              font-size: 15px;
+        }
+
+
+
         &:hover {
             background: var(--main-color);
             color: #fff;
@@ -157,36 +357,66 @@ header {
     }
 
     .prev {
-        left: 90%;
+        left: 88%;
+        @include responsive("tablet-landscape") {
+             left: 80%;
+
+        }
+         @include responsive("tablet") {
+            left: 76%;
+        }
+
+        @include responsive("mobile") {
+             left: 65%;
+        }
     }
 }
 
 
 nav {
-
     &.navbar {
-        box-shadow: 0 .5rem 1rem #0000001a;
+        box-shadow: 0 0.5rem 1rem #0000001a;
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         z-index: 1000;
-        background: rgba(173, 169, 150, .5);
-        background: -webkit-linear-gradient(to right, rgba(234, 234, 234, .5), rgba(219, 219, 219, .5), rgba(242, 242, 242, .5), rgba(173, 169, 150, .5));
-        background: linear-gradient(to right, rgba(234, 234, 234, .5), rgba(219, 219, 219, .5), rgba(242, 242, 242, .5), rgba(173, 169, 150, .5));
+        background: rgba(173, 169, 150, 0.5);
+        background: -webkit-linear-gradient(to right,
+                rgba(234, 234, 234, 0.5),
+                rgba(219, 219, 219, 0.5),
+                rgba(242, 242, 242, 0.5),
+                rgba(173, 169, 150, 0.5));
+        background: linear-gradient(to right,
+                rgba(234, 234, 234, 0.5),
+                rgba(219, 219, 219, 0.5),
+                rgba(242, 242, 242, 0.5),
+                rgba(173, 169, 150, 0.5));
 
         &.colored {
             background: #ada996;
-            background: -webkit-linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
-            background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+            background: -webkit-linear-gradient(to right,
+                    #eaeaea,
+                    #dbdbdb,
+                    #f2f2f2,
+                    #ada996);
+            background: linear-gradient(to right,
+                    #eaeaea,
+                    #dbdbdb,
+                    #f2f2f2,
+                    #ada996);
         }
 
         .navbar-toggler {
-            @include responsive('tablet-landscape') {
+            @include responsive("tablet-landscape") {
                 display: none;
             }
 
-            @include responsive('mobile') {
+            @include responsive("desktop") {
+                display: none;
+            }
+
+            @include responsive("mobile") {
                 width: 43px;
                 height: 35px;
                 border: 1px solid var(--main-color);
@@ -196,6 +426,7 @@ nav {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                gap: 4px;
 
                 span {
                     display: block;
@@ -205,49 +436,149 @@ nav {
                 }
             }
 
+            @include responsive("tablet") {
+                width: 45px;
+                height: 38px;
+                border: 1px solid var(--main-color);
+                border-radius: 5px;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+
+                span {
+                    display: block;
+                    width: 60%;
+                    height: 2px;
+                    background-color: var(--main-color);
+                }
+            }
         }
 
         .navbar-collapse {
-            ul:nth-of-type(1) {
-                @include responsive('tablet-landscape') {
+            ul {
+                @include responsive("tablet-landscape") {
                     background: transparent;
                     margin-bottom: 0;
+
+                    .nav-item {
+                        font-size: 15px;
+                    }
+
+                    &.list-two {
+                        li i {
+
+                            font-size: 20px;
+                        }
+                    }
                 }
 
-                @include responsive('desktop') {
+                @include responsive("desktop") {
                     background: transparent;
                     margin-bottom: 0;
+
+                    .nav-item {
+                        font-size: 18px;
+                    }
+                }
+
+                @include responsive("mobile") {
+                    padding-block: 10px;
+                    background: #ada996;
+                    background: -webkit-linear-gradient(to right,
+                            #eaeaea,
+                            #dbdbdb,
+                            #f2f2f2,
+                            #ada996);
+                    background: linear-gradient(to right,
+                            #eaeaea,
+                            #dbdbdb,
+                            #f2f2f2,
+                            #ada996);
+                    border-radius: 10px;
+                    margin: 10px 0;
+                    display: flex;
+                    justify-content: center;
+
+                    align-items: center;
+
+                    .nav-item {
+                        font-size: 12px;
+                        width: fit-content;
+                    }
+
+                    &.list-two li i {
+
+                        font-size: 15px;
+                    }
+                }
+
+                @include responsive("tablet") {
+                    padding-block: 10px;
+                    background: #ada996;
+                    background: -webkit-linear-gradient(to right,
+                            #eaeaea,
+                            #dbdbdb,
+                            #f2f2f2,
+                            #ada996);
+                    background: linear-gradient(to right,
+                            #eaeaea,
+                            #dbdbdb,
+                            #f2f2f2,
+                            #ada996);
+                    border-radius: 10px;
+                    margin: 10px 0;
+                    margin: 10px 0;
+                    display: flex;
+                    justify-content: center;
+
+                    align-items: center;
+                    width: 80%;
+
+                    .nav-item {
+                        font-size: 15px;
+                        width: fit-content;
+                    }
+
+                    &.list-two {
+                        margin: auto;
+
+                        li i {
+
+                            font-size: 20px;
+                        }
+                    }
                 }
             }
 
             ul:nth-of-type(1) li.nav-item:not(:last-child) {
-                @include responsive('tablet-landscape') {
-                    margin-right: 15px
+                @include responsive("tablet-landscape") {
+                    margin-right: 15px;
                 }
 
-                @include responsive('desktop') {
-                    margin-right: 15px
+                @include responsive("desktop") {
+                    margin-right: 15px;
+                }
+            }
+
+            ul:nth-of-type(1) li.nav-item {
+                @include responsive("tablet-landscape") {
+                    margin-inline: initial;
                 }
 
-                ul:nth-of-type(1) li.nav-item {
-                    @include responsive('tablet-landscape') {
-                        margin-inline: initial
-                    }
-
-                    @include responsive('desktop') {
-                        margin-inline: initial
-                    }
+                @include responsive("desktop") {
+                    margin-inline: initial;
                 }
 
-                @include responsive('mobile') {
-                    padding-block: 10px;
-                    background: #ada996;
-                    background: -webkit-linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
-                    background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
-                    border-radius: 10px;
-                    margin: 10px 0;
+                @include responsive("mobile") {
+                    margin: 8px 15px;
                 }
 
+                @include responsive("tablet") {
+                    margin: 10px 15px;
+                }
             }
 
             font-size: 20px;
@@ -269,7 +600,6 @@ nav {
                     &::before {
                         left: 0%;
                         opacity: 1;
-
                     }
 
                     &::after {
@@ -279,7 +609,7 @@ nav {
                 }
 
                 &::before {
-                    content: '';
+                    content: "";
                     display: block;
                     position: absolute;
                     width: 30%;
@@ -290,11 +620,10 @@ nav {
                     left: -30%;
                     opacity: 0;
                     transition-duration: 0.4s;
-
                 }
 
                 &::after {
-                    content: '';
+                    content: "";
                     display: block;
                     position: absolute;
                     width: 30%;
@@ -304,15 +633,12 @@ nav {
                     bottom: 0%;
                     right: -30%;
                     opacity: 0;
-
                     transition-duration: 0.4s;
-
                 }
 
                 &:hover::before {
                     left: 0%;
                     opacity: 1;
-
                 }
 
                 &:hover::after {
@@ -323,7 +649,7 @@ nav {
 
             .list-two li i {
                 font-size: 25px;
-                transition-duration: .5s;
+                transition-duration: 0.5s;
                 cursor: pointer;
                 color: #777;
 
@@ -333,39 +659,36 @@ nav {
             }
         }
 
-
         .navbar-brand {
-            width: 10%;
+                width: 10%;
 
-            @include responsive('desktop') {
+            @include responsive("desktop") {
                 width: 10%;
             }
 
-            @include responsive('tablet-landscape') {
-                width: 16%;
+            @include responsive("tablet-landscape") {
+                width: 12%;
             }
 
-            @include responsive('tablet') {
-                width: 20%;
+            @include responsive("tablet") {
+                width: 10%;
             }
 
-            @include responsive('mobile') {
+            @include responsive("mobile") {
                 width: 25%;
             }
         }
-
-
-
     }
 
     ul:nth-of-type(1) li.nav-item,
     nav.navbar .navbar-collapse ul:nth-of-type(2) {
-
         text-align: initial;
         width: initial;
         margin-inline: initial;
     }
 }
+
+
 
 .saleOff {
     overflow: hidden;

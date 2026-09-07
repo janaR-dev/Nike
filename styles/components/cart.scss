@@ -3,14 +3,33 @@
 .shoping-popup.popup {
 
     overflow-y: scroll;
-     .btn{
+
+    .btn {
         font-size: 20px;
-                        
-                    }
-                    .buy{
-                        margin-block: 20px;
-                        font-size: 25px;
-                    }
+
+    }
+
+    .buy {
+        margin-block: 20px;
+        font-size: 25px;
+        @include responsive("tablet-landscape") {
+                    font-size: 20px;
+               
+            }
+
+            @include responsive("tablet") {
+                margin-block: 10px;
+                    font-size: 15px;
+                
+            }
+
+            @include responsive("mobile") {
+                              margin-block: 5px;
+
+                    font-size: 10px;
+                
+            }
+    }
 
     &.active {
         .box {
@@ -19,25 +38,112 @@
             font-size: 25px;
             margin-block: 40px;
 
+            @include responsive("desktop") {}
+
+            @include responsive("tablet-landscape") {
+                .mainButton {
+                    font-size: 15px;
+                }
+
+                width: 750px;
+            }
+
+            @include responsive("tablet") {
+                width: 550px;
+                .mainButton {
+                    font-size: 12px;
+                }
+            }
+
+            @include responsive("mobile") {
+                .mainButton {
+                    font-size: 10px;
+                }
+            }
+
             .item {
                 background-color: #fff;
                 padding: 20px;
                 border-radius: 10px;
 
-            
-                    .product-body {
-                        h5 {
+                ul:nth-of-type(2) {
+                    @include responsive("tablet-landscape") {
+
+                        font-size: 15px;
+
+
+                    }
+
+                    @include responsive("tablet") {
+                        font-size: 15px;
+                    }
+
+                    @include responsive("mobile") {}
+
+                }
+
+                .product-content {
+                    h3 {
                         text-overflow: ellipsis;
                         white-space: nowrap;
                         overflow: hidden;
                         font-size: 26px;
-                   
+
+                        @include responsive("tablet-landscape") {
+
+                            font-size: 15px;
+
+
+                        }
+
+                        @include responsive("tablet") {
+                            font-size: 15px;
+                        }
+
+                        @include responsive("mobile") {}
+
                     }
-                    strong{
+
+                    strong {
                         font-size: 20px;
+                        margin-right: 10px;
+                        text-align: center;
+
+                        @include responsive("desktop") {}
+
+                        @include responsive("tablet-landscape") {
+
+                            font-size: 15px;
+
+
+                        }
+
+                        @include responsive("tablet") {
+                            font-size: 15px;
+                        }
+
+                        @include responsive("mobile") {}
                     }
+                    .price {
+    font-size: 22px;
+    @include responsive("tablet-landscape") {
+        font-size: 18px;
+    }
+
+    @include responsive("tablet") {
+       
+        font-size: 15px;
+    }
+
+    @include responsive("mobile") {
+       
+        font-size: 12px;
+    }
+
+
+}
                 }
-                
+
             }
 
         }

@@ -1,6 +1,120 @@
 @use '../abstracts/shares' as *;
-#Featured{
+
+#Featured {
 
 
-    
+    .products {
+        .product {
+           padding: 10px;
+ 
+            .item {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                position: relative;
+                overflow: hidden;
+                 
+        @media (min-width: 371px) and (max-width: 767px){max-width: 280px;
+        margin: auto;}
+
+                &:hover {
+                    .head {
+                        i {
+                            transition-delay: .3s;
+                            opacity: 1;
+                            bottom: 60px;
+                        }
+
+                        ul {
+                            transition-delay: .6s;
+                            opacity: 1;
+                            bottom: 0;
+                        }
+                    }
+                }
+
+                .offer {
+                    color: #fff;
+                    background-color: var(--main-color);
+                    width: 100px;
+                    text-align: center;
+                    font-size: 12px;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    transform: rotate(45deg);
+                    position: absolute;
+                    top: 20px;
+                    right: -20px;
+                }
+
+                .head {
+                    position: relative;
+
+                    img {
+                        transform: scale(1);
+                        transition-duration: .5s;
+                    }
+
+                    i {
+                        color: #000;
+                        font-size: 16px;
+                        border-radius: 100%;
+                        background-color: #fff;
+                        box-shadow: 0 10px 15px #0003;
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        bottom: 40px;
+                        left: 50%;
+                        transform: translate(-50%);
+                        transition-duration: 1s;
+                        opacity: 0;
+                        cursor: pointer;
+
+
+                        &:hover {
+
+                            transition-duration: .5s;
+                            transition-delay: 0s;
+                            background-color: var(--main-color);
+                            color: #fff;
+                        }
+
+                    }
+
+
+
+
+                    ul {
+                        display: flex;
+                        position: absolute;
+                        bottom: -20px;
+                        left: 50%;
+                        transform: translate(-50%);
+                        transition-duration: 1s;
+                        opacity: 0;
+
+                        li {
+                            width: 15px;
+                            height: 15px;
+                            background-color: transparent;
+                            border: 1px solid var(--main-color);
+                            border-radius: 100%;
+                            cursor: pointer;
+                            transition-duration: .5s;
+                            margin-right: 10px;
+
+                            &.active {
+                                background-color: var(--main-color);
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

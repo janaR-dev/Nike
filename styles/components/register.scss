@@ -4,6 +4,19 @@
 
     .box{
      width: 550px;
+       @include responsive("tablet-landscape") {
+                width: 350px;
+            }
+
+            @include responsive("tablet") {
+           width: 350px;
+                
+            }
+
+            @include responsive("mobile") {
+                             width: 250px;
+                
+            }
 
     }
     input{

@@ -1,75 +1,52 @@
-document.addEventListener("DOMContentLoaded", function () {
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    updateNav();
+
+    showLatest();
+
+    showFeatured();
+
+    activatePopups();
 
     restoreCart();
-    emptyCartMessage();
 
-});
-body.classList.add(colors[currentIndex]);
-slide[currentIndex].classList.add("active");
+    body.classList.add(
+        colors[currentIndex]
+    );
 
-prev.addEventListener("click", () => changeColor(-1));
-next.addEventListener("click", () => changeColor(1));
-    
+    slides[currentIndex]?.classList.add(
+        "active"
+    );
 
-window.addEventListener("scroll",changeNavbarColor);
+    prev?.addEventListener(
+        "click",
+        () => changeColor(-1)
+    );
 
-btns.forEach(btn => {
-  btn.addEventListener('click', ActivatePopup);
-});
+    next?.addEventListener(
+        "click",
+        () => changeColor(1)
+    );
 
-popups.forEach(popup => {
-  popup.addEventListener('click', () => {
-    let key = popup.dataset.keyPopup;
-    toggle_popUp(key);
-  });
-});
-
-closeBtns.forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    let key = btn.dataset.keyPopup ;
-    toggle_popUp(key);
-  });
-});
-
-popupContainer.forEach(container => {
-  container.addEventListener('click', function(e) {
-    e.stopPropagation();
-  });
+    initializeEvents();
 });
 
 
-window.addEventListener('scroll', () => {
-  let currentSectionId = '';
 
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    const sectionBottom = sectionTop + section.offsetHeight;
 
-    if (
-      window.scrollY >= sectionTop - 150 &&
-      window.scrollY < sectionBottom - 150
-    ) {
-      currentSectionId = section.getAttribute('id');
-    }
-  });
 
-  navLinks.forEach(link => {
-    link.classList.remove('active');
+window.addEventListener("load", () => {
 
-    if (link.dataset.sectionId === currentSectionId) {
-        link.classList.add('active');
-    }
-  });
+    let loadingScreen =
+        document.querySelector(".loadingScreen");
+
+    loadingScreen.classList.remove("d-none", "hide");
+    loadingScreen.classList.add("d-flex", "show");
+
+    setTimeout(() => {
+        loadingScreen.classList.remove("d-flex", "show");
+        loadingScreen.classList.add("d-none", "hide");
+    }, 3000);
+
 });
-
-
-products.forEach(product =>{
-    let sizes = product.querySelectorAll('li.sizes');
-    sizes.forEach(size=>{
-        size.addEventListener('click', (e)=> {
-        let selectedSize = e.currentTarget
-        , selectedProduct = size.closest('.product')
-
-        updateProduct(selectedSize, selectedProduct)
-    } )})
-})

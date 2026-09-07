@@ -1,1 +1,80 @@
 @use '../abstracts/shares' as *;
+
+.product-popup{
+overflow: scroll;
+margin-top: 20px;
+    .box{
+                margin: 20px auto;
+                height: fit-content;
+       
+          @include responsive("tablet-landscape") {
+                width: 680px;
+            }
+
+            @include responsive("tablet") {
+                width: 655px;
+                
+            }
+
+            @include responsive("mobile") {
+                             width:355px;
+            }
+        .selected-img{
+            width: 80%;
+        }
+    }
+
+    .product-content{
+        h3{
+            font-size: 35px;
+            
+          @include responsive("tablet-landscape") {
+             font-size: 30px;
+            }
+
+            @include responsive("tablet") {
+             font-size:25px;
+                
+            }
+
+            @include responsive("mobile") {
+                        font-size: 20px;            }
+        }
+        .price{
+            font-size: 20px;
+            
+          @include responsive("tablet-landscape") {
+             font-size:18px;
+            }
+
+            @include responsive("tablet") {
+             font-size:15px;
+                
+            }
+
+            @include responsive("mobile") {
+                        font-size: 15px;            }
+        }
+        p{
+            font-size: 20px;
+            letter-spacing: 1.5px;
+            
+           @include responsive("tablet-landscape") {
+             font-size: 18px;
+            }
+
+            @include responsive("tablet") {
+             font-size:15px;
+                
+            }
+
+            @include responsive("mobile") {
+                        font-size: 10px;            }
+        }
+       
+        strong{
+            margin-right: 10px;
+            
+        }
+    }
+}
